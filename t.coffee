@@ -22,7 +22,8 @@ if Meteor.isClient
 			console.log 'will rerun when data arrived', data
 
 			# do jquery here
-			console.log $('#jqueryContainer').append('<p>jquery append p to dom</p>') if data?.text
+			console.log $('#jqueryContainer').text($('#jqueryContainer').text() + ' ' + data.text) if data?.text
+			console.log $('#jqueryContainer').append('<p>jquery append a p to dom</p>') if data?.text
 
 # 
 if Meteor.isServer
