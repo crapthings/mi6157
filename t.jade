@@ -1,0 +1,15 @@
+head
+	title test
+
+body
+	div#jqueryContainer will replace this when data arrived
+	+tp1
+
+template(name='tp1')
+
+	if Template.subscriptionsReady
+
+		span#text {{test.text}}
+
+	else
+		span loading
